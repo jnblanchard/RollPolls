@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Option" representedClassName="PRODUCT_MODULE_NAME.Option" parentEntity="Poll" syncable="YES">
+        <attribute name="nameDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="yesCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="poll" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Poll" inverseName="options" inverseEntity="Poll" syncable="YES"/>
+    </entity>
+    <entity name="Poll" representedClassName="PRODUCT_MODULE_NAME.Poll" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Option" inverseName="poll" inverseEntity="Option" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Poll" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Option" positionX="-54" positionY="0" width="128" height="105"/>
+    </elements>
+</model>
